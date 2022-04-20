@@ -7,12 +7,12 @@ export default function App() {
   const [cmsData, setCMSData] = useState([]);
 
   useEffect(() => {
-    fetch(`https://help-i-need-a-cms-in-30-minutes.vercel.app/Pages.json`).then(
-      async (res) => {
-        const data = await res.json();
-        setCMSData(data);
-      }
-    );
+    fetch(
+      `https://help-i-need-a-cms-in-30-minutes-cdn.vercel.app/Pages.json`
+    ).then(async (res) => {
+      const data = await res.json();
+      setCMSData(data);
+    });
   }, []);
 
   return (
